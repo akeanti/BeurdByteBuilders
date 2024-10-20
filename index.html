@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="BeurdByte Builders">
+    <meta property="og:description" content="The official webpage for the beurdbytebuilder's club.">
+    <meta property="og:image" content="https://media.discordapp.net/attachments/1250749400159096842/1289961720743465024/pngegg.png?ex=66fab9f8&is=66f96878&hm=4eb3dcf3a00a9e6d16e7e6db583f6f9e620b780b19766b14836df3d3b23bac3b&=&format=webp&quality=lossless&width=536&height=708">
+    <meta name="theme-color" content="#88e1f2">
+    <meta name="google-site-verification" content="xjUJtPjMptcQrCDQ3lY1sFIMZ5J9doUHCHDTlnXBBDg" />
+    <title>BeurdByteBuilders</title>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <img src="pics/cpge.png" alt="Robotics Club Logo">
+            <button class="hamburger" aria-label="Toggle navigation">
+                &#9776; <!-- Hamburger icon -->
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <div class="search-bar">
+                        <input type="text" id="searchInput" placeholder="Search...">
+                        <button type="submit">&#128269;</button> <!-- Search icon -->
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <div class="content-left">
+                <h1>Beurd Byte Builders</h1>
+                <p>A club for all technology and robotic lovers, a place where all the robotic lovers unite and make the best projects.</p>
+            </div>
+            <div class="content-right">
+                <img src="pics/arduino.png" alt="Arduino">
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        &copy; 2024 Beurd Robotics Club, Designed with love by <a href="https://akeanti.github.io/" target="_blank">Akeanti</a>.
+    </footer>
+    
+    <script>
+            // Search functionality
+            searchInput.addEventListener('input', function() {
+                const query = searchInput.value.toLowerCase();
+                const contentLeft = document.querySelector('.content-left');
+                const contentRight = document.querySelector('.content-right');
+
+                if (query) {
+                    contentLeft.style.display = contentLeft.textContent.toLowerCase().includes(query) ? 'block' : 'none';
+                    contentRight.style.display = contentRight.textContent.toLowerCase().includes(query) ? 'block' : 'none';
+                } else {
+                    contentLeft.style.display = 'block';
+                    contentRight.style.display = 'block';
+                }
+            });
+    </script>
+
+    <!-- JavaScript for Hamburger Menu -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+
+            hamburger.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                hamburger.classList.toggle('active'); // Optional: Change hamburger icon when active
+            });
+        });
+    </script>
+</body>
+</html>
